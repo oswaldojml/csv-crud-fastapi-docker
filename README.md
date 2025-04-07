@@ -6,8 +6,6 @@ A simple RESTful API built with **FastAPI** that performs **CRUD operations on a
 
 - Create, Read, Update, Delete (CRUD) records in a CSV file
 - Each record contains: `id`, `nome`, `cognome`, `codice_fiscale`
-- Get count of total records
-- FastAPI auto-generated documentation at `/docs`
 - Fully Dockerized
 
 ---
