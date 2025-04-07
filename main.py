@@ -6,16 +6,22 @@ from typing import List
 
 
 app = FastAPI()
-CSV_FILE = "data.csv"
+CSV_DIR = "data"
+CSV_FILE = CSV_DIR + "/data.csv"
+
 
 # Initialize CSV
 def initialize_csv():
     """Creates CSV if it doesn't exist"""
+    if not os.path.exists(CSV_DIR):
+        os.makedirs(CSV_DIR)
     if not os.path.exists(CSV_FILE):
         with open(CSV_FILE, mode="w", newline="") as file:
             writer = csv.writer(file)
             writer.writerow(["id", "nome", "cognome", "codice_fiscale"])
+
 initialize_csv()
+
 
 # Data model
 class Item(BaseModel):
