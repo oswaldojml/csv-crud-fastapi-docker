@@ -40,6 +40,8 @@ uvicorn main:app --reload
     docker run -p 8000:8000 -v ./data:/code/data csv-crud-fastapi
     ```
 
+---
+
 ## API Endpoints
 
 | Method | Endpoint         | Description         |
